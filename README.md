@@ -5,6 +5,19 @@ Basic implementation of Pomf.
 **Note:** Only the `/upload` path is implemented so far, and it doesn't
 handle errors.
 
+## Install
+
+```sh
+go get -u github.com/warkio/pomf-go/cmd/pomf-server
+
+cd "${GOPATH}/bin"
+
+# Copy the `pomf-server` executable to some directory in your $PATH.
+#
+# This assumes you want to put it in `${HOME}/bin`.
+cp pomf-server "${HOME}/bin"
+```
+
 ## Usage
 
 ### Start server
