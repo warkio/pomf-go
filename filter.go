@@ -8,7 +8,7 @@ import (
 
 var ErrNotAllowed = errors.New("not allowed")
 
-const DefaultMaxFileSize = 10 * 1024 * 1024
+const DefaultMaxFileSize = 50 * 1024 * 1024
 
 type FilterFile interface {
 	io.Reader
