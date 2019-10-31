@@ -49,6 +49,10 @@ func (fs *Storage) SelfCheck() error {
 
 	fi, err = f.Stat()
 	if err != nil {
+		if os.IsNotExist(err) {
+			return fmt.Errorf("directory does not exists: %s", fs.UploadDirectory)
+		}
+
 		return err
 	}
 
